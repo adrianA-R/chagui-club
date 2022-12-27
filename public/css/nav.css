@@ -1,0 +1,44 @@
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-around;
+    height: 65px;
+}
+
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    color: #307;
+    font-size: 30px;
+}
+
+.navbar__logo span{
+    margin: 10px;
+}
+
+.navbar__logo img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.navbar__list{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar__list li{
+    margin: 20px;
+}
+
+.navbar__list a{
+    text-decoration: none;
+    padding: 10px;
+    color: #2f2f2f;
+}

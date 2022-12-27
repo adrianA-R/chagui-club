@@ -1,0 +1,113 @@
+/***** GameList ******/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(289deg, #a06ae3, #6a7ee3, #6ae38e, #e3866a);
+  background-size: 800% 800%;
+
+  -webkit-animation: fondo 24s ease infinite;
+  -moz-animation: fondo 24s ease infinite;
+  -o-animation: fondo 24s ease infinite;
+  animation: fondo 24s ease infinite;
+}
+
+.card__game {
+  margin: 15px auto;
+  background-color: #fff;
+  width: 350px;
+  height: 400px;
+  transition: 1s;
+  overflow: hidden;
+  box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
+  -webkit-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
+  -moz-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
+}
+
+.card__game:hover {
+  height: 500px;
+}
+
+.card__game img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.card__content {
+  padding: 25px;
+  color: #444;
+}
+
+.card__content h2,
+label {
+  display: block;
+  padding: 10px;
+}
+
+.card__content a {
+  margin-top: 30px;
+  background-color: #0c3;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.card-products .content {
+  background-color: aqua;
+}
+
+@media screen and (min-width: 810px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@-webkit-keyframes fondo {
+  0% {
+    background-position: 87% 0%;
+  }
+  50% {
+    background-position: 14% 100%;
+  }
+  100% {
+    background-position: 87% 0%;
+  }
+}
+@-moz-keyframes fondo {
+  0% {
+    background-position: 87% 0%;
+  }
+  50% {
+    background-position: 14% 100%;
+  }
+  100% {
+    background-position: 87% 0%;
+  }
+}
+@-o-keyframes fondo {
+  0% {
+    background-position: 87% 0%;
+  }
+  50% {
+    background-position: 14% 100%;
+  }
+  100% {
+    background-position: 87% 0%;
+  }
+}
+@keyframes fondo {
+  0% {
+    background-position: 87% 0%;
+  }
+  50% {
+    background-position: 14% 100%;
+  }
+  100% {
+    background-position: 87% 0%;
+  }
+}

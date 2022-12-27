@@ -1,0 +1,17 @@
+{{>nav}}
+
+<section class="container">
+
+  {{#if games}}
+  {{#each games}}
+  <div class="card__game">
+    <img src="{{image}}"  class="card__content-img"></img>
+    <div class="card__content">
+      <h2> {{name}} </h2>
+      <label> {{price}} </label>
+      <a href="games/{{id}}" class="card__btn"> Ver más </a>
+    </div>  
+  </div>
+  {{/each}}
+  {{/if}}
+</section>
