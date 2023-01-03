@@ -18,7 +18,6 @@ router.get('/add', async (req, res) => {
 	res.render('games/addGames');
 });
 
-
 router.get('/:id',
 	validatorHandler(getGameSchema, 'params'),
 	async (req, res, next) => {
@@ -43,7 +42,6 @@ router.post('/findGame',
 			const game = await service.findOne(name);
 			res.status(200).render('games/game', { g: game });
 		} catch (e) {
-			
 			next(e);
 		}
 		
@@ -61,6 +59,13 @@ router.post('/',
 		} catch (e) {
 			next(e);
 		}
+	});
+
+router.get('/modify/:id',
+	async (req, res) => {
+		const { id } = req.params;
+		const game = await service.findOne(id);
+		await res.render('partials/modify', { g: game });
 	});
 
 router.patch('/:id',

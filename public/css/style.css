@@ -5,9 +5,13 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.inactive{
+  display: none;
+}
+
 .welcome {
   background-color: #307;
-  padding-top: 50px;
+  padding: 50px 0px;
 }
 
 .welcome-logo {
@@ -23,6 +27,7 @@
   margin: auto;
   font-size: 30px;
   max-width: 700px;
+  /* min-width: 470px; */
   padding: 20px;
   background-color: #fcfcfc;
   border-radius: 25px;
@@ -47,7 +52,7 @@
   display: block;
   font-size: 24px;
   max-width: 300px;
-  padding: 15px;
+  padding: 10px;
   margin: 20px auto;
   border: none;
   border-bottom: 3px #307 solid;
@@ -55,12 +60,14 @@
 }
 
 .welcome_form-item input:hover {
-  background-color: #ccc;
+  background-color: #e0e2e2;
   border-radius: 3px;
 }
 
 .welcome_form-item input:focus {
   border-bottom: 3px #05f solid;
+  background-color: #e0e2e2;
+  color: #000;
   outline: none;
 }
 
@@ -82,11 +89,4 @@
 
 .welcome_form-submit input:active {
   background-color: #0c3;
-}
-
-@media screen and (min-width: 540px) {
-  .welcome {
-    width: 100%;
-    height: 100vh;
-  }
 }

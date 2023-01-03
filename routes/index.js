@@ -8,7 +8,6 @@ const router = express.Router();
 
 function appRoutes(app){
  app.use('/', router);
-
  router.use('/', indexRouter);
  router.use('/games', gamesRoutes);
  router.use('/users',usersRoutes);

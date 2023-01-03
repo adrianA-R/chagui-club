@@ -1,0 +1,32 @@
+<div class="modal fade" id="modifyScreen" tabindex="-1" aria-labelledby="modifyScreenLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modifyScreenLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit" action="/games/{{g.id}}" method="patch" class="form__container">  
+          <label class="title"> Crear un nuevo juego </label>
+
+          <div class="welcome_form-item">
+            <input id="name-games" name="name" value="{{g.name}}" type="text">
+          </div>
+
+          <div class="welcome_form-item">
+            <input id="image-games" name="image" value="{{g.image}}" type="url">
+          </div>
+
+          <div class="welcome_form-submit">
+            <input type="submit" value="Editar" class="form__btn" id="form-btn"/> 
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

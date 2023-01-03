@@ -8,21 +8,25 @@ class gameServices {
   }
 
   async generate() {
-    const limit = 10; // cuanddo size sea 0 optamos por limite de 10
-    for (var i = 0; i < limit; i++) {
-      this.games.push({
-        id: faker.datatype.uuid(),
-        name: faker.commerce.productName(),
-        price: parseInt(faker.commerce.price(), 10),
-        image: faker.image.imageUrl()
-      })
-    }
+    // const limit = 5; // cuanddo size sea 0 optamos por limite de 10
+    // for (var i = 0; i < limit; i++) {
+    //   this.games.push({
+    //     id: faker.datatype.uuid(),
+    //     name: faker.commerce.productName(),
+    //     price: parseInt(faker.commerce.price(), 10),
+    //     image: faker.image.imageUrl()
+    //   })
+    // }
+
+    this.games.push({ id: faker.datatype.uuid(), name:"Juego 1", amount:"100", places: "Parques y ferias", image:"/img/juegos_interactivos.jpg"});
+    this.games.push({ id: faker.datatype.uuid(), name:"Juego 2", amount:"20", places: "Espacios cerrados, casas, edificios", image:"/img/juegos_interactivos2.jpg"});
+    this.games.push({ id: faker.datatype.uuid(), name:"Juego 3", amount:"80", places: "Colegios y eventos", image:"/img/juegos_interactivos3.jpg"});
+    this.games.push({ id: faker.datatype.uuid(), name:"Juego 4", amount:"300", places: "Planes vacacionales", image:"/img/juegos_interactivos4.jpg"});
   }
 
   async create(data) {
     try {
       const newGame = {
-        id: faker.datatype.uuid(),
         ...data
       }
       this.games.push(newGame);

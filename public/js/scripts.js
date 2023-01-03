@@ -1,1 +1,1 @@
-console.log("archivo estático");
+

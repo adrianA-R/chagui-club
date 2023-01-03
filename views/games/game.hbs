@@ -1,12 +1,11 @@
-<div class="layout">
-  <section class="container">
-    <div class="card__game">
-      <img src="{{g.image}}" alt="imagen">
-      <div class="card__content">
-        <h2> {{g.name}} </h2>
-        <label> {{g.id}} </label>
-        <a href="games/{{id}}" class="button"> Ver más </a>
-      </div>
+{{>nav}}
+<section class="container">
+  <div class="card__game-only">
+    <img src="{{g.image}}" alt="imagen">
+    <div class="card__content-only">
+      <h2> {{g.name}} </h2>
+      <label> {{g.id}} </label>
+      <a href="games/{{id}}" class="button"> Ver más </a>
     </div>
-  </section>
-</div>
+  </div>
+</section>

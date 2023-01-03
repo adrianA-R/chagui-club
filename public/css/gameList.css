@@ -2,32 +2,29 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  background: linear-gradient(289deg, #a06ae3, #6a7ee3, #6ae38e, #e3866a);
+  background-color: #fcfcfc;
+  /* background: linear-gradient(289deg, #a06ae3, #6a7ee3, #6ae38e, #e3866a);
   background-size: 800% 800%;
 
   -webkit-animation: fondo 24s ease infinite;
   -moz-animation: fondo 24s ease infinite;
   -o-animation: fondo 24s ease infinite;
-  animation: fondo 24s ease infinite;
+  animation: fondo 24s ease infinite; */
 }
 
 .card__game {
-  margin: 15px auto;
+  margin: 20px 10px;
   background-color: #fff;
-  width: 350px;
-  height: 400px;
-  transition: 1s;
-  overflow: hidden;
-  box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
-  -webkit-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
-  -moz-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
+  transition: .4s;
+  
 }
 
 .card__game:hover {
-  height: 500px;
+  box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
+  -webkit-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
+  -moz-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
 }
 
 .card__game img {
@@ -47,23 +44,32 @@ label {
   padding: 10px;
 }
 
-.card__content a {
-  margin-top: 30px;
-  background-color: #0c3;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 12px;
-  padding: 10px 20px;
-}
-
 .card-products .content {
   background-color: aqua;
 }
 
-@media screen and (min-width: 810px) {
+.card__game-only{
+  margin: auto;
+  padding: 10px;
+  background-color: #fff;
+  width: 100%;
+}
+.container-card__btn{
+  display: flex;
+
+}
+
+.card__btn{
+  padding: 15px;
+  text-decoration: none;
+  background-color: #666;
+  color: #fff;
+}
+
+@media screen and (min-width: 800px) {
   .container {
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+
   }
 }
 

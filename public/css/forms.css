@@ -1,26 +1,36 @@
 .layout {
   width: 100%;
-  height: 100vh;
+  height: 100vh; 
 }
 
-form {
+.title{
+  font-size: 30px;
+  font-weight: 800;
+  color: #323232;
+}
+
+#form-add, 
+#form-edit {
   background-color: #fff;
   margin: 0px auto;
-  height: 70%;
+  height: auto;
   box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
   -webkit-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
   -moz-box-shadow: 2px 9px 17px -6px rgba(0, 0, 0, 0.96);
-}
-
-.form__control {
-  margin: auto;
-  padding: 10px;
-  border: none;
-  background-color: #fff;
 }
 
 .form__container {
   padding: 30px;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 540px){
+
+  .layout{
+    margin: 20px auto;
+    width: auto;
+    max-width: 550px;
+  }
+
 }

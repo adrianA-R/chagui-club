@@ -1,17 +1,31 @@
 {{>nav}}
-
+{{>modify}}
+{{>add}}
 <section class="container">
 
   {{#if games}}
   {{#each games}}
-  <div class="card__game">
-    <img src="{{image}}"  class="card__content-img"></img>
-    <div class="card__content">
-      <h2> {{name}} </h2>
-      <label> {{price}} </label>
-      <a href="games/{{id}}" class="card__btn"> Ver más </a>
-    </div>  
-  </div>
+  <a href="/games/{{id}}">
+    <div class="card__game">
+      <img src="{{image}}"  class="card__content-img"></img>
+      <div class="card__content">
+        <h2> {{name}} </h2>
+        <label> {{price}} </label>
+        {{!-- <a href="games/{{id}}" class="card__btn"> Ver más </a> --}}
+      </div>
+      <div class="container-card__btn">
+        <a href="/games/modify/{{id}}" class="card__btn" data-bs-toggle="modal" data-bs-target="#modifyScreen"> Editar </a>
+        <a href="/games/delete/{{id}}" class="card__btn"> Eliminar </a>
+      </div>  
+    </div>
+  </a>
   {{/each}}
+
+  {{else}}
+    <div class="card__game">
+      <h3>Aún no hay juegos agregados</h3>
+      
+    </div>
+
   {{/if}}
 </section>

@@ -3,12 +3,14 @@ const { engine } = require("express-handlebars")
 const routes = require("./routes");
 const cors = require("cors");
 const path = require('path');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const flashMessages = require('flash-messages');
+const { library, icon } = ('@fortawesome/fontawesome-svg-core')
 
 const { logErrors, errorHandler, boomErrorHandler } = require("./middlewares/error.handler.js");
 
 const app = express();
-const port = 3000;
+app.set('port', process.env.PORT || 3000);
 
 
 //midddlewares
@@ -44,10 +46,10 @@ routes.appRoutes(app);
 app.use(logErrors);
 app.use(boomErrorHandler); 
 app.use(errorHandler);
-
+app.use(flashMessages.init);
 
 //Subida de servidor
-app.listen(port,(req, res)=>{
-	console.log("Aplicación corriendo en el puerto 3000")
+app.listen(app.get('port'),()=>{
+	console.log("Aplicación corriendo en el puerto",app.get('port'))
 });
 
