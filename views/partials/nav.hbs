@@ -1,17 +1,53 @@
-<nav class="navbar">
-    <a href="/">
-        <div class="navbar__logo">
-          <img src="/img/logoprincipal.jpeg" alt="logo"> 
-          <span> Cluub! </span>   
-        </div>
-    </a>
-    <ul class="navbar__list">
+<nav>
+  <img src="/fontawesome/svgs/menu-mobile.png" alt="menu" class="menu">
+  <div class="navbar-desktop">
+
+    <div class="nav-right">
+      <a href="/">
+        <img src="/img/logoprincipal.jpeg" alt="logo">
+        <span> Cl<b class="text-green">u</b><b class="text-blue">u</b>b! </span>
+      </a>
+    </div>
+
+    <div class="nav-left">
+      <ul>
         <li>
-            <a href="/games/add" class="add-games" data-bs-toggle="modal" data-bs-target="#addScreen"> Nuevo Juego </a>
+          <a href="/games/add" class="add-games"> Nuevo Juego </a>
         </li>
         <li>
-            <a href="#"> Perfil </a>
+          <a href="#"> Lista de juegos </a>
         </li>
+        <li>
+          <a href="#"> Mis juegos </a>
+        </li>
+        <li>
+          <a href="#"> Iniciar Sesión </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navbar-mobile inactive">
+    <ul>
+      <li>
+        <img src="/fontawesome/svgs/square-plus.svg" alt="menu" class="menu">
+        <a href="/games/add" class="add-games"> Nuevo Juego </a>
+      </li>
+      <li>
+        <img src="/fontawesome/svgs/rectangle-list.svg" alt="menu" class="menu">
+        <a href="#"> Lista de juegos </a>
+      </li>
     </ul>
 
+    <ul>
+      <li>
+        <img src="/fontawesome/svgs/game.svg" alt="menu" class="menu">
+        <a href="#"> Mis juegos </a>
+      </li>
+      <li>
+        <img src="/fontawesome/svgs/user.svg" alt="menu" class="menu">
+        <a href="#" class="signup"> Iniciar Sesión </a>
+      </li>
+    </ul>
+  </div>
 </nav>

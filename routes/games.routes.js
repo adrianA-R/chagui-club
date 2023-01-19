@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/add', async (req, res) => {
-	res.render('games/addGames');
+	res.render('games/add');
 });
 
 router.get('/:id',
@@ -65,10 +65,10 @@ router.get('/modify/:id',
 	async (req, res) => {
 		const { id } = req.params;
 		const game = await service.findOne(id);
-		await res.render('partials/modify', { g: game });
+		await res.render('games/modify', { g: game });
 	});
 
-router.patch('/:id',
+router.get('/edit/:id',
 	validatorHandler(getGameSchema, 'params'),
 	validatorHandler(updateGameSchema, 'body'),
 	async (req, res) => {
@@ -81,13 +81,10 @@ router.patch('/:id',
 		console.log("success");
 	});
 
-router.delete('/:id', async (req, res) => {
+router.get('/delete/:id', async (req, res) => {
 	const { id } = req.params;
-
-
 	const trash = await service.delete(id);
-	res.status(200).json(trash)
-	console.log("success");
+	res.status(200).redirect('/games');
 });
 
 module.exports = router;

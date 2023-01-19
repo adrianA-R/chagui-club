@@ -1,0 +1,24 @@
+<form id="form-edit" action="/games/edit/{{g.id}}" class="form__container">
+  <label class="title"> Modifica un nuevo juego </label>
+
+  <div class="welcome_form-item">
+    <input id="name-games" name="name" value="{{g.name}}" type="text">
+  </div>
+
+  <div class="welcome_form-item">
+    <input id="name-games" name="name" value="{{g.amount}}" type="text">
+  </div>
+
+  <div class="welcome_form-item">
+    <input id="name-games" name="name" value="{{g.places}}" type="text">
+  </div>
+
+  <div class="welcome_form-item">
+    <input id="image-games" name="image" value="{{g.image}}" type="url">
+  </div>
+
+  <div class="welcome_form-submit">
+    <input type="submit" value="Editar" class="form__btn" id="form-btn" />
+  </div>
+
+</form>

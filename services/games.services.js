@@ -18,15 +18,55 @@ class gameServices {
     //   })
     // }
 
-    this.games.push({ id: faker.datatype.uuid(), name:"Juego 1", amount:"100", places: "Parques y ferias", image:"/img/juegos_interactivos.jpg"});
-    this.games.push({ id: faker.datatype.uuid(), name:"Juego 2", amount:"20", places: "Espacios cerrados, casas, edificios", image:"/img/juegos_interactivos2.jpg"});
-    this.games.push({ id: faker.datatype.uuid(), name:"Juego 3", amount:"80", places: "Colegios y eventos", image:"/img/juegos_interactivos3.jpg"});
-    this.games.push({ id: faker.datatype.uuid(), name:"Juego 4", amount:"300", places: "Planes vacacionales", image:"/img/juegos_interactivos4.jpg"});
+    this.games.push({ 
+      id: faker.datatype.uuid(), 
+      name: "Juego Didáctico 1",
+      description: "Reprehenderit occaecat nisi ut mollit deserunt id ad anim velit veniam eiusmod irure ipsum. Elit pariatur tempor incididunt nisi enim minim eiusmod ad ea et culpa voluptate. Sunt adipisicing veniam nostrud dolor nulla. Duis officia enim cupidatat irure nulla id et enim elit proident labore. Reprehenderit elit dolore cupidatat id sit pariatur nostrud ex laborum elit. Eu commodo dolor culpa eiusmod commodo aliqua qui laborum ea occaecat elit sint.",
+      type: "Presencial", 
+      amount:"100", 
+      places: "Parques",
+      public: ["Niños"], 
+      image:"/img/juegos_interactivos.jpg"
+    });
+
+    this.games.push({ 
+      id: faker.datatype.uuid(), 
+      name: "Juego Didáctico 2",
+      description: "Reprehenderit occaecat nisi ut mollit deserunt id ad anim velit veniam eiusmod irure ipsum. Elit pariatur tempor incididunt nisi enim minim eiusmod ad ea et culpa voluptate. Sunt adipisicing veniam nostrud dolor nulla. Duis officia enim cupidatat irure nulla id et enim elit proident labore. Reprehenderit elit dolore cupidatat id sit pariatur nostrud ex laborum elit. Eu commodo dolor culpa eiusmod commodo aliqua qui laborum ea occaecat elit sint.",
+      type: "Presencial", 
+      amount:"Alta cantidad", 
+      places: "Parques y ferias", 
+      public: ["Niños","Niñas","Adolescentes","Adultos","Adultos Mayores"],
+      image:"/img/juegos_interactivos2.jpg"
+    });
+
+    this.games.push({ 
+      id: faker.datatype.uuid(), 
+      name: "Juego Didáctico 3",
+      description: "Reprehenderit occaecat nisi ut mollit deserunt id ad anim velit veniam eiusmod irure ipsum. Elit pariatur tempor incididunt nisi enim minim eiusmod ad ea et culpa voluptate. Sunt adipisicing veniam nostrud dolor nulla. Duis officia enim cupidatat irure nulla id et enim elit proident labore. Reprehenderit elit dolore cupidatat id sit pariatur nostrud ex laborum elit. Eu commodo dolor culpa eiusmod commodo aliqua qui laborum ea occaecat elit sint.",
+      type: "Presencial", 
+      amount:"cantidad media", 
+      places: "Colegios e instituciones", 
+      public: ["Niños","Niñas","Adolescentes"],
+      image:"/img/juegos_interactivos3.jpg"
+    });
+    
+    this.games.push({ 
+      id: faker.datatype.uuid(), 
+      name: "Juego o dinámica empresarial",
+      description: "Reprehenderit occaecat nisi ut mollit deserunt id ad anim velit veniam eiusmod irure ipsum. Elit pariatur tempor incididunt nisi enim minim eiusmod ad ea et culpa voluptate. Sunt adipisicing veniam nostrud dolor nulla. Duis officia enim cupidatat irure nulla id et enim elit proident labore. Reprehenderit elit dolore cupidatat id sit pariatur nostrud ex laborum elit. Eu commodo dolor culpa eiusmod commodo aliqua qui laborum ea occaecat elit sint.",
+      type: "Presencial", 
+      amount:"Poca cantidad", 
+      places: "Espacios cerrados", 
+      public: ["Adultos", "Equipos de trabajo","Empresas"],
+      image:"/img/juegos_interactivos4.jpg"
+    });
   }
 
   async create(data) {
     try {
       const newGame = {
+        id: faker.datatype.uuid(),
         ...data
       }
       this.games.push(newGame);
@@ -69,7 +109,7 @@ class gameServices {
 
   async delete(id) {
 
-    const index = this.games.findIndex(item => item.id === id);
+    const index = this.games.findIndex(item => item.id == id);
     if (index === -1) {
       throw boom.notFound('product not found');
     }

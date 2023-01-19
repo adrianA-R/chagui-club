@@ -1,31 +1,43 @@
 {{>nav}}
-{{>modify}}
-{{>add}}
-<section class="container">
+
+<section class="container-grid-games">
 
   {{#if games}}
   {{#each games}}
-  <a href="/games/{{id}}">
-    <div class="card__game">
-      <img src="{{image}}"  class="card__content-img"></img>
+
+  <div class="card__game">
+
+    <a href="/games/{{id}}">
+      <img src="{{image}}" class="card__content-img"></img>
       <div class="card__content">
         <h2> {{name}} </h2>
-        <label> {{price}} </label>
-        {{!-- <a href="games/{{id}}" class="card__btn"> Ver más </a> --}}
+        <p> {{description}} </p>
+        {{#each public}}
+        <label class="filters_public"> {{this}} </label>
+        {{/each}}
       </div>
-      <div class="container-card__btn">
-        <a href="/games/modify/{{id}}" class="card__btn" data-bs-toggle="modal" data-bs-target="#modifyScreen"> Editar </a>
-        <a href="/games/delete/{{id}}" class="card__btn"> Eliminar </a>
-      </div>  
+      <span> ver mas... </span>
+    </a>
+    <div class="card__footer">
+      <div class="card__filters">
+        <label class="filters_type">  {{type}} </label>
+        <label class="filters_amount"> {{amount}} </label>
+        <label class="filters_places"> {{places}} </label>
+      </div>
+      <div class="card__btn">
+        <a href="/games/modify/{{id}}" class="card__btn modify"> Editar </a>
+        <a href="/games/delete/{{id}}" class="card__btn trash"> Eliminar </a>
+      </div>
     </div>
-  </a>
+  </div>
+
   {{/each}}
 
   {{else}}
-    <div class="card__game">
-      <h3>Aún no hay juegos agregados</h3>
-      
-    </div>
+  <div class="card__game">
+    <h3>Aún no hay juegos agregados</h3>
+
+  </div>
 
   {{/if}}
 </section>
