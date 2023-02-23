@@ -1,23 +1,44 @@
-<form id="form-add" action="/games" method="post" class="form__container">
-  <label class="title"> Crear un nuevo juego </label>
+<section class="add-games-form">
+  <form action="/games" method="post" class="container-form">
+    <label class="title"> Crear un nuevo juego </label>
 
-  <div class="welcome_form-item">
-    <input id="name-games" name="name" type="text">
-  </div>
+    <div class="input-form">
+      <label> Nombre de juego </label>
+      <input class="box" id="name-games" name="name" type="text">
+    </div>
 
-  <div class="welcome_form-item">
-    <input id="name-games" name="amount" type="text">
-  </div>
+    <div class="input-form">
+      <label > Inserte imágenes sobre el juego </label>
+      <input type="file" id="uploadImage" name="images" multiple>
+    </div>
 
-  <div class="welcome_form-item">
-    <input id="name-games" name="places" type="text">
-  </div>
+    <div class="input-form-checkbox">
+      <label> ¿El juego es online o presencial? </label> 
+      <input type="checkbox" name="Presencial">
+      <input type="checkbox" name="Virtual">
+    </div>
 
-  <div class="welcome_form-item">
-    <input id="image-games" name="image" type="url">
-  </div>
-  <div class="welcome_form-submit">
-    <input type="submit" value="Crear" class="form__btn" id="form-btn" />
-  </div>
+    <div class="input-form">
+      <label> ¿En qué entornos se puede jugar? </label>
+      <input type="checkbox" name="Parques">
+      <input type="checkbox" name="Salones de fiesta">      
+      <input type="checkbox" name="Casas">
+    </div>
+    
+    <div class="input-form">
+      <label> ¿para qué publico está dirigido? </label>
+      <input type="checkbox" name="Niños">
+      <input type="checkbox" name="Niñas">
+      <input type="checkbox" name="Adolescentes">
+    </div>
 
-</form>
+    <div class="input-form">
+      <label> Descripción </label>
+      <textarea class="box" id="name-games" name="amount" type="text" cols="30" rows="10"></textarea> 
+    </div>
+
+    <div class="welcome_form-submit">
+      <input type="submit" value="Crear" class="form__btn" id="form-btn" />
+    </div>
+  </form>
+</section>

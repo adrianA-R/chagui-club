@@ -1,12 +1,10 @@
-{{>nav}}
 
 <section class="container-grid-games">
-
   {{#if games}}
   {{#each games}}
 
   <div class="card__game">
-
+    
     <a href="/games/{{id}}">
       <img src="{{image}}" class="card__content-img"></img>
       <div class="card__content">
@@ -24,10 +22,12 @@
         <label class="filters_amount"> {{amount}} </label>
         <label class="filters_places"> {{places}} </label>
       </div>
-      <div class="card__btn">
-        <a href="/games/modify/{{id}}" class="card__btn modify"> Editar </a>
-        <a href="/games/delete/{{id}}" class="card__btn trash"> Eliminar </a>
-      </div>
+      {{#if id_role}}
+        <div class="card__btn">
+          <a href="/games/modify/{{id}}" class="card__btn modify"> Editar </a>
+          <a href="/games/delete/{{id}}" class="card__btn trash"> Eliminar </a>
+        </div>
+      {{/if}}
     </div>
   </div>
 

@@ -6,6 +6,11 @@ nav{
     z-index: 1;
     border-bottom: 2px var(--blanco);
 }
+.session{
+    background: none;
+    border: none;
+    color:  var(--gris-carbon);
+}
 .menu{
     display: none;
     cursor: pointer;
@@ -26,7 +31,6 @@ nav{
 }
 .nav-right a img{
     object-fit: cover;
-    border-radius: 20px;
     width: 50px;
     height: 52px;
     margin: 0 0 0 8px;
@@ -34,7 +38,7 @@ nav{
 .nav-right a span{
     letter-spacing: 0.06em;
     font-family: 'Fredoka One', cursive;
-    color: #fff;
+    color: var(--blanco);
     font-size: 30px;
     position: absolute;
     left: 55px;
@@ -71,7 +75,7 @@ nav{
     padding: 24px;
     position: absolute;
     background: var(--blanco);
-    top: 62px;
+    top: 55px;
     left: 0px;
     width: 100%;
     z-index: 1;
