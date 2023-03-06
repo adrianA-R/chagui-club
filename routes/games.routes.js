@@ -27,7 +27,7 @@ router.get('/:id', isLoggedIn,
 		try {
 			const { id } = req.params;
 			let game = await service.findOne(id);
-			
+			res.status(200).render('games/game', { g: game });	
 		}
 		catch (err) {
 			next(err);

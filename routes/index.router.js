@@ -1,7 +1,7 @@
 const express = require('express');
 //const validator = require('express-validator');
 const passport = require('passport');
-const { isLoggedIn, isLoggedInIndex} = require('../lib/access') //--->> valida si estan loggeados
+const { isLoggedIn} = require('../lib/access') //--->> valida si estan loggeados
 const validatorHandler = require('../middlewares/validator.handler');
 const { newUserSchema, loginSchema }  = require('../schemas/access.schema')
 
@@ -9,7 +9,7 @@ const { newUserSchema, loginSchema }  = require('../schemas/access.schema')
 const router = express.Router();
 
 
-router.get('/', isLoggedInIndex,
+router.get('/',
 	async (req, res) => {
 	res.render('index');
 });
@@ -18,12 +18,12 @@ router.get("profile", isLoggedIn, (req, res) => {
 	res.render("profile");
 });
 
-router.get('/signin', isLoggedInIndex,
+router.get('/signin',
     (req, res) => {
     res.render('signin');
 });
 
-router.get('/signup', isLoggedInIndex,
+router.get('/signup',
     (req, res) => {
 	res.render('signup');
 });

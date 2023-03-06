@@ -13,13 +13,11 @@ var roleDefault = 1;
 const { database } = require('./lib/keys');
 require('./lib/passport');
 
-console.log("todo corre")
+
 const { logErrors, errorHandler, boomErrorHandler } = require("./middlewares/error.handler.js");
 
 const app = express();
-app.set('port', process.env.PORT || 3000);
-
-
+app.set('port', process.env.PORT || 3030);
 
 //midddlewares
 
